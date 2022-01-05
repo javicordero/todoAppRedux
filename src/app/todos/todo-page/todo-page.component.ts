@@ -11,15 +11,25 @@ import * as actions from '../todo.actios';
 })
 export class TodoPageComponent implements OnInit {
 
-  checkToggleAll!: FormControl;
+  checkToggleAll!: FormControl
 
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.checkToggleAll = new FormControl()
-    this.checkToggleAll.valueChanges.subscribe(value => {
-      this.store.dispatch(actions.toggleAllTodos({value}))
-    })
+    
+    this.store.select('todos')
+      .subscribe((todoList => {
+        let allSelected: boolean = false
+        if(todoList.length > 0 && todoList.filter((todo => !todo.completado)).length === 0){
+          allSelected = true
+        }
+        this.checkToggleAll = new FormControl(allSelected)
+
+        this.checkToggleAll.valueChanges.subscribe(value => {
+          this.store.dispatch(actions.toggleAllTodos({value}))
+        })
+      }))
+      
   }
 
 }

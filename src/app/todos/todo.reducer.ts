@@ -3,8 +3,8 @@ import { Todo } from './models/todo.model';
 import * as actions from './todo.actios';
 
 export const initialState: Todo[] = [
-    new Todo('Salvar al mundo'),
-    new Todo('Tarea2')
+    new Todo('Task1'),
+    new Todo('Task2')
 ];
  
 const _todoReducer = createReducer(
@@ -37,7 +37,6 @@ on(actions.editTodo, (state, {id, texto}) => {
 
 
 on(actions.toggleAllTodos, (state, {value}) => {
-  console.log(value)
   return state.map(todo => {
     return {
       ...todo,
