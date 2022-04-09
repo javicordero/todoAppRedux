@@ -1,5 +1,5 @@
 <header class="header">
-    <h1>Tareas</h1>
-    <input class="new-todo" placeholder="Escribe una tarea" autofocus [formControl]="textInput"
+    <h1>{{"todo_title" | translate}}</h1>
+    <input class="new-todo" placeholder="{{'write_todo' | translate}}" autofocus [formControl]="textInput"
         (keyup.enter)="addTodo()">
 </header>
