@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
@@ -21,7 +20,6 @@ import { environment } from 'src/environments/environment';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     TodoModule,
     StoreModule.forRoot({todos: todoReducer, filter: filterReducer}),
     StoreDevtoolsModule.instrument({
