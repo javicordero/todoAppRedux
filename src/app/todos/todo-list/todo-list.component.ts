@@ -20,11 +20,7 @@ export class TodoListComponent implements OnInit {
       .subscribe((todos) => this.todoList = todos)
 
     this.store.select('filter')
-      .subscribe((filtro) =>
-      {
-        console.log(filtro)
-        this.filter = filtro
-      })
+      .subscribe((filtro) =>{this.filter = filtro})
   }
 
 }
