@@ -13,5 +13,5 @@ export interface AppState {
 export const appReducer: ActionReducerMap<AppState> = {
   todos: todoReducer,
   filter: filterReducer,
-  language: languageReducer,
+  language: languageReducer
 }

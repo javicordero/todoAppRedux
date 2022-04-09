@@ -7,7 +7,7 @@ import * as todoActions from '../todo.actios'
 @Component({
   selector: 'app-todo-footer',
   templateUrl: './todo-footer.component.html',
-  styleUrls: ['./todo-footer.component.scss'],
+  styleUrls: ['./todo-footer.component.scss']
 })
 export class TodoFooterComponent implements OnInit {
   totalTodos: number = 0

@@ -17,16 +17,16 @@ import { TranslateModule } from '@ngx-translate/core'
     TodoItemComponent,
     TodoListComponent,
     TodoPageComponent,
-    FilterPipe,
+    FilterPipe
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     TranslateModule.forChild({
-      extend: true,
+      extend: true
     }),
-    HttpClientModule,
+    HttpClientModule
   ],
-  exports: [TodoPageComponent],
+  exports: [TodoPageComponent]
 })
 export class TodoModule {}

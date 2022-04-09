@@ -16,7 +16,7 @@ const _todoReducer = createReducer(
       if (todo.id !== id) return todo
       return {
         ...todo,
-        completado: !todo.completado,
+        completado: !todo.completado
       }
     })
   }),
@@ -26,7 +26,7 @@ const _todoReducer = createReducer(
       if (todo.id !== id) return todo
       return {
         ...todo,
-        texto: texto,
+        texto: texto
       }
     })
   }),
@@ -35,7 +35,7 @@ const _todoReducer = createReducer(
     return state.map((todo) => {
       return {
         ...todo,
-        completado: value,
+        completado: value
       }
     })
   }),

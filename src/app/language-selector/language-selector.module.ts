@@ -11,10 +11,10 @@ import { TranslateModule } from '@ngx-translate/core'
     CommonModule,
     ReactiveFormsModule,
     TranslateModule.forChild({
-      extend: true,
+      extend: true
     }),
-    HttpClientModule,
+    HttpClientModule
   ],
-  exports: [LanguageSelectorComponent],
+  exports: [LanguageSelectorComponent]
 })
 export class LanguageSelectorModule {}

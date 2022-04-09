@@ -7,7 +7,7 @@ import * as actions from '../todo.actios'
 @Component({
   selector: 'app-todo-page',
   templateUrl: './todo-page.component.html',
-  styleUrls: ['./todo-page.component.scss'],
+  styleUrls: ['./todo-page.component.scss']
 })
 export class TodoPageComponent implements OnInit {
   checkToggleAll!: FormControl
