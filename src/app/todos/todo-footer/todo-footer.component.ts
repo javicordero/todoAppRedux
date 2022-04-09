@@ -13,7 +13,7 @@ export class TodoFooterComponent implements OnInit {
 
   totalTodos: number = 0
   filterList: string[] = ['all',  'active', 'completed']
-  filter!: string; 
+  filter!: string;
 
 
   constructor(private store: Store<AppState>) { }

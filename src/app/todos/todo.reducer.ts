@@ -3,10 +3,10 @@ import { Todo } from './models/todo.model';
 import * as actions from './todo.actios';
 
 export const initialState: Todo[] = [
-    new Todo('Task1'),
-    new Todo('Task2')
+    new Todo('Tarea1'),
+    new Todo('Tarea2')
 ];
- 
+
 const _todoReducer = createReducer(
   initialState,
 
@@ -56,7 +56,7 @@ on(actions.clearCompleted, (state) => {
 
 
 );
- 
+
 export function todoReducer(state: any, action: any) {
   return _todoReducer(state, action);
 }
