@@ -1,5 +1,10 @@
 <header class="header">
-    <h1>{{"todo_title" | translate}}</h1>
-    <input class="new-todo" placeholder="{{'write_todo' | translate}}" autofocus [formControl]="textInput"
-        (keyup.enter)="addTodo()">
+  <h1>{{ 'todo_title' | translate }}</h1>
+  <input
+    class="new-todo"
+    placeholder="{{ 'write_todo' | translate }}"
+    autofocus
+    [formControl]="textInput"
+    (keyup.enter)="addTodo()"
+  />
 </header>

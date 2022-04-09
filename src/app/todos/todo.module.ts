@@ -1,14 +1,14 @@
-import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TodoAddComponent } from './todo-add/todo-add.component';
-import { TodoFooterComponent } from './todo-footer/todo-footer.component';
-import { TodoItemComponent } from './todo-item/todo-item.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { TodoPageComponent } from './todo-page/todo-page.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FilterPipe } from './filter/filter.pipe';
-import { TranslateModule } from '@ngx-translate/core';
+import { HttpClientModule } from '@angular/common/http'
+import { NgModule } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { TodoAddComponent } from './todo-add/todo-add.component'
+import { TodoFooterComponent } from './todo-footer/todo-footer.component'
+import { TodoItemComponent } from './todo-item/todo-item.component'
+import { TodoListComponent } from './todo-list/todo-list.component'
+import { TodoPageComponent } from './todo-page/todo-page.component'
+import { ReactiveFormsModule } from '@angular/forms'
+import { FilterPipe } from './filter/filter.pipe'
+import { TranslateModule } from '@ngx-translate/core'
 
 @NgModule({
   declarations: [
@@ -17,18 +17,16 @@ import { TranslateModule } from '@ngx-translate/core';
     TodoItemComponent,
     TodoListComponent,
     TodoPageComponent,
-    FilterPipe
+    FilterPipe,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     TranslateModule.forChild({
       extend: true,
-      }),
-    HttpClientModule
+    }),
+    HttpClientModule,
   ],
-  exports:[
-    TodoPageComponent
-  ]
+  exports: [TodoPageComponent],
 })
-export class TodoModule { }
+export class TodoModule {}

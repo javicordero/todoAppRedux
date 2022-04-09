@@ -1,11 +1,15 @@
 <footer class="footer">
-    <!-- This should be `0 items left` by default -->
-    <span class="todo-count"><strong> {{totalTodos}} </strong> {{(totalTodos == 1 ? 'item_left' : 'items_left') | translate}}</span>
-    <ul class="filters">
-        <li *ngFor="let filtro of filterList">
-            <a [class.selected]="filter === filtro" href="#" (click)="changeFilter(filtro)">{{filtro | translate | titlecase}}</a>
-        </li>
-    </ul>
-    <!-- Hidden if no completed items are left ↓ -->
-    <button class="clear-completed" (click)="clearCompleted()">{{"clear_completed" | translate}}</button>
+  <!-- This should be `0 items left` by default -->
+  <span class="todo-count"
+    ><strong> {{ totalTodos }} </strong> {{ (totalTodos == 1 ? 'item_left' : 'items_left') | translate }}</span
+  >
+  <ul class="filters">
+    <li *ngFor="let filtro of filterList">
+      <a [class.selected]="filter === filtro" href="#" (click)="changeFilter(filtro)">{{
+        filtro | translate | titlecase
+      }}</a>
+    </li>
+  </ul>
+  <!-- Hidden if no completed items are left ↓ -->
+  <button class="clear-completed" (click)="clearCompleted()">{{ 'clear_completed' | translate }}</button>
 </footer>

@@ -1,40 +1,36 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component'
 
-import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { todoReducer } from './todos/todo.reducer';
-import { filterReducer } from './todos/filter/filter.reducer';
-import { languageReducer } from './language-selector/language.reducer';
+import { StoreModule } from '@ngrx/store'
+import { StoreDevtoolsModule } from '@ngrx/store-devtools'
+import { todoReducer } from './todos/todo.reducer'
+import { filterReducer } from './todos/filter/filter.reducer'
+import { languageReducer } from './language-selector/language.reducer'
 
-import { TodoModule } from './todos/todo.module';
-import { FooterComponent } from './footer/footer.component';
+import { TodoModule } from './todos/todo.module'
+import { FooterComponent } from './footer/footer.component'
 
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment'
 
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
+import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 
-import {HttpClientModule, HttpClient } from '@angular/common/http';
-import { LanguageSelectorModule } from './language-selector/language-selector.module';
+import { HttpClientModule, HttpClient } from '@angular/common/http'
+import { LanguageSelectorModule } from './language-selector/language-selector.module'
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http)
 }
 
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    FooterComponent,
-  ],
+  declarations: [AppComponent, FooterComponent],
   imports: [
     BrowserModule,
     TodoModule,
     LanguageSelectorModule,
-    StoreModule.forRoot({todos: todoReducer, filter: filterReducer, language: languageReducer}),
+    StoreModule.forRoot({ todos: todoReducer, filter: filterReducer, language: languageReducer }),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
@@ -44,12 +40,12 @@ export function HttpLoaderFactory(http: HttpClient) {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
+        deps: [HttpClient],
       },
-      defaultLanguage: 'es'
-    })
+      defaultLanguage: 'es',
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
