@@ -21,7 +21,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http'
 import { LanguageSelectorModule } from './language-selector/language-selector.module'
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http)
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json')
 }
 
 @NgModule({

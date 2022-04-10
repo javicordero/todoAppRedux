@@ -23,6 +23,7 @@
     "@ngrx/store-devtools": "^13.0.2",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "angular-cli-ghpages": "^1.0.0",
     "prettier": "^2.6.2",
     "rxjs": "~7.4.0",
     "todomvc-app-css": "^2.4.1",
