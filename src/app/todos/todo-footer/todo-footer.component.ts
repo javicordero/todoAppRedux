@@ -10,16 +10,18 @@ import * as todoActions from '../todo.actios'
   styleUrls: ['./todo-footer.component.scss']
 })
 export class TodoFooterComponent implements OnInit {
-  totalTodos: number = 0
+  totalTodosUncompleted: number = 0
+  totalTodosCompleted: number = 0
   filterList: string[] = ['all', 'active', 'completed']
   filter!: string
 
   constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
-    this.store
-      .select('todos')
-      .subscribe((todoList) => (this.totalTodos = todoList.filter((todo) => !todo.completado).length))
+    this.store.select('todos').subscribe((todoList) => {
+      this.totalTodosUncompleted = todoList.filter((todo) => !todo.completado).length
+      this.totalTodosCompleted = todoList.filter((todo) => todo.completado).length
+    })
     this.store.select('filter').subscribe((filter) => {
       this.filter = filter
     })
