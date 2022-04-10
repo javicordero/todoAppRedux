@@ -2,7 +2,7 @@ import { AppState } from 'src/app/app.reducer'
 import { Store } from '@ngrx/store'
 import { Component, OnInit } from '@angular/core'
 import { FormControl, Validators } from '@angular/forms'
-import * as actions from './language.actions'
+import * as actions from './language-selector.actions'
 import { TranslateService } from '@ngx-translate/core'
 
 @Component({

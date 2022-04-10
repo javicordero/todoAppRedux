@@ -1,5 +1,5 @@
 import { ActionReducerMap } from '@ngrx/store'
-import { languageReducer } from './language-selector/language.reducer'
+import { languageSelectorReducer } from './language-selector/language-selector.reducer'
 import { filterReducer } from './todos/filter/filter.reducer'
 import { Todo } from './todos/models/todo.model'
 import { todoReducer } from './todos/todo.reducer'
@@ -13,5 +13,5 @@ export interface AppState {
 export const appReducer: ActionReducerMap<AppState> = {
   todos: todoReducer,
   filter: filterReducer,
-  language: languageReducer,
+  language: languageSelectorReducer,
 }

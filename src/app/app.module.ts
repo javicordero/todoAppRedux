@@ -7,7 +7,7 @@ import { StoreModule } from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { todoReducer } from './todos/todo.reducer'
 import { filterReducer } from './todos/filter/filter.reducer'
-import { languageReducer } from './language-selector/language.reducer'
+import { languageSelectorReducer } from './language-selector/language-selector.reducer'
 
 import { TodoModule } from './todos/todo.module'
 import { FooterComponent } from './footer/footer.component'
@@ -30,7 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     TodoModule,
     LanguageSelectorModule,
-    StoreModule.forRoot({ todos: todoReducer, filter: filterReducer, language: languageReducer }),
+    StoreModule.forRoot({ todos: todoReducer, filter: filterReducer, language: languageSelectorReducer }),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
