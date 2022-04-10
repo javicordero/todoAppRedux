@@ -2,7 +2,7 @@ import { createReducer, on } from '@ngrx/store'
 import { Todo } from './models/todo.model'
 import * as actions from './todo.actios'
 
-export const initialState: Todo[] = [new Todo('Tarea1'), new Todo('Tarea2')]
+export const initialState: Todo[] = []
 
 const _todoReducer = createReducer(
   initialState,
