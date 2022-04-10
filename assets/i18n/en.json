@@ -1,0 +1,13 @@
+{
+  "app_title": "Todo App",
+  "todo_title": "Todos",
+  "write_todo": "Write a todo",
+  "all": "All",
+  "active": "Active",
+  "completed": "Completed",
+  "clear_completed": "Clear completed",
+  "double_click_to_edit": "Double-click to edit a todo",
+  "developed_by": "Developed by",
+  "item_left": "item left",
+  "items_left": "items left"
+}

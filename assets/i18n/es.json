@@ -1,0 +1,13 @@
+{
+  "app_title": "Lista de tareas",
+  "todo_title": "Tareas",
+  "write_todo": "Escribe una tarea",
+  "all": "Todas",
+  "active": "Activas",
+  "completed": "Completadas",
+  "clear_completed": "Limpiar completadas",
+  "double_click_to_edit": "Doble click para editar una tarea",
+  "developed_by": "Desarrollado por",
+  "item_left": "tarea pendiente",
+  "items_left": "tareas pendientes"
+}
